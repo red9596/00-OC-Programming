@@ -24,5 +24,5 @@
 -(int) entries;  //返回card数量
 -(void) list;
 
-
+-(void) sort;
 @end

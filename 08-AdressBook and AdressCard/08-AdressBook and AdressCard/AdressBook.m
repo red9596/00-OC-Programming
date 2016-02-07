@@ -64,4 +64,9 @@
         NSLog(@"remove failed");
 }
 
+-(void)sort
+{
+    [book sortUsingSelector:@selector(compareNames:)];
+}
+
 @end

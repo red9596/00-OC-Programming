@@ -12,13 +12,18 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString * aName = @"AAAA";
-        NSString * aEmail = @"A@@@";
+        NSString * aName = @"FFFF";
+        NSString * aEmail = @"F@@@";
         NSString * bName = @"BBBB";
         NSString * bEmail = @"B@@@";
+        NSString * cName = @"CCCC";
+        NSString * cEmail = @"C@@@";
+        
         
         AdressCard * card1 = [[AdressCard alloc] init];
         AdressCard * card2 = [[AdressCard alloc] init];
+        AdressCard * card3 = [[AdressCard alloc] init];
+        
         
         AdressBook * mybook = [[AdressBook alloc] initWithName:@"red adress book"];
         NSLog(@"entries in adress book: %i",[mybook entries]);
@@ -27,8 +32,13 @@ int main(int argc, const char * argv[]) {
         [card1 setEmail:aEmail];
         [card2 setName:bName];
         [card2 setEmail:bEmail];
+        [card3 setName:cName];
+        [card3 setEmail:cEmail];
+        
+        
         [mybook addCard:card1];
         [mybook addCard:card2];
+        [mybook addCard:card3];
         
         NSLog(@"entries in adress book: %i",[mybook entries]);
         
@@ -42,7 +52,12 @@ int main(int argc, const char * argv[]) {
         
         [mybook removeCard:@"AAAA"];
         
+        //[mybook list];
+        
+        
+        [mybook sort];
         [mybook list];
+        
         
     }
     return 0;
